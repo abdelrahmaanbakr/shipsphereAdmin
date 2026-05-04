@@ -58,7 +58,7 @@ export default function ShipmentsPage() {
           placeholder="Search ID, route, courier..."
           value={search}
           onChange={(event) => setSearch(event.target.value)}
-          className="w-64 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+          className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-white sm:w-64"
         />
       </div>
 
@@ -83,8 +83,8 @@ export default function ShipmentsPage() {
         ))}
       </div>
 
-      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
-        <table className="w-full text-sm">
+      <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
+        <table className="min-w-[820px] w-full text-sm">
           <thead className="bg-gray-50 dark:bg-gray-800">
             <tr>
               {["Tracking ID", "From", "To", "Courier", "Price", "Status", ""].map(

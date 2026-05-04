@@ -209,7 +209,7 @@ function ChatPanel({
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.94, y: 20 }}
       transition={{ duration: 0.22, ease: "easeOut" }}
-      className="flex h-[500px] w-[350px] origin-bottom-right flex-col overflow-hidden rounded-2xl border border-white/50 bg-white/75 shadow-2xl ring-1 ring-black/5 backdrop-blur-2xl dark:border-white/10 dark:bg-[#0b1120]/75 dark:ring-white/10"
+      className="flex h-[min(500px,calc(100dvh-6rem))] w-[calc(100vw-1.5rem)] origin-bottom-right flex-col overflow-hidden rounded-2xl border border-white/50 bg-white/75 shadow-2xl ring-1 ring-black/5 backdrop-blur-2xl dark:border-white/10 dark:bg-[#0b1120]/75 dark:ring-white/10 sm:w-[350px]"
       aria-label="Support chat panel"
     >
       <div className="border-b border-black/5 bg-gradient-to-r from-blue-600/90 via-sky-500/90 to-cyan-400/90 px-5 py-4 text-white dark:border-white/10">
@@ -386,7 +386,7 @@ export function ChatWidget() {
   };
 
   return (
-    <div className="pointer-events-none fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="pointer-events-none fixed bottom-3 right-3 z-50 flex flex-col items-end gap-3 sm:bottom-6 sm:right-6">
       <AnimatePresence mode="wait">
         {isOpen ? (
           <div key="support-chat-panel" className="pointer-events-auto">

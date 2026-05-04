@@ -58,7 +58,7 @@ export default function DashboardPage() {
         </div>
       ) : null}
 
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard
           label="Total shipments"
           value={isLoading ? "Loading..." : dashboardStats.totalShipments.toLocaleString()}
@@ -133,7 +133,7 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
+      <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
         <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4 dark:border-gray-800">
           <p className="text-sm font-medium text-gray-900 dark:text-white">
             Recent shipments
@@ -145,7 +145,7 @@ export default function DashboardPage() {
             View all
           </button>
         </div>
-        <table className="w-full text-sm">
+        <table className="min-w-[720px] w-full text-sm">
           <thead className="bg-gray-50 dark:bg-gray-800">
             <tr>
               {["Tracking ID", "Route", "Courier", "Price", "Status"].map((heading) => (
